@@ -202,7 +202,7 @@ Custom-Theme:
         position: relative;
         left: var(--sidebar-width);
       }
-      @media (max-width: 1379px) {
+      @media (min-width: 1379px) {
         #main {
           max-width: calc(100vw - var(--sidebar-width) - 56px) !important;
         }
