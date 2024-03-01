@@ -1,0 +1,53 @@
+- id: theme_mode_switch_automation
+  alias: Mode switch automation
+  description: Switch light/dark mode by sunset/sonrise.
+  trigger:
+  - event: start
+    platform: homeassistant
+  - entity_id: sun.sun
+    platform: state
+    to: above_horizon
+    id: up
+  - entity_id: sun.sun
+    platform: state
+    to: below_horizon
+    id: down
+  action:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: down
+      sequence:
+      - service: frontend.set_theme
+        data:
+          mode: dark
+    - conditions:
+      - condition: trigger
+        id: up
+      sequence:
+      - service: frontend.set_theme
+        data:
+          mode: light
+    default:
+    - service: frontend.set_theme
+      data:
+        mode: light
+  mode: single
+- id: theme_mode_switch
+  alias: Mode switch
+  description: Switch light/dark mode by selector in dashboard.
+  trigger:
+  - event: start
+    platform: homeassistant
+  - entity_id:
+    - input_boolean.dark_mode
+    platform: state
+  condition:
+  - condition: template
+    value_template: '{{ is_state("input_boolean.dark_mode", "on") }}'
+  action:
+  - service: frontend.set_theme
+    data:
+      mode: '{{ "dark" if is_state("input_boolean.dark_mode", "on") else "light" }}'
+  mode: single
+  initial_state: true

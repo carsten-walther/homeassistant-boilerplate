@@ -1,0 +1,75 @@
+---
+#################################################
+#                                               #
+# Styles for markdown cards                     #
+#                                               #
+#################################################
+
+style:
+  .: |
+    ha-card {
+      --ha-card-background: transparent;
+      --ha-card-border-color: transparent;
+      --ha-card-border-width: 0;
+    }
+    ha-markdown {
+      margin-top: 16px;
+      padding: 0 !important;
+    }
+  ha-markdown:
+    $: |
+      h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      @media (max-width: 500px) {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      @media (max-width: 1023px) {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+      }
+      hr {
+        border: 0 none;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        margin: 2rem 0 0 0;
+        padding: 1rem 0 0 0;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+      }
+      a {
+        color: var(--primary-text-color) !important;
+        text-decoration: none !important;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        display: flex;
+        width: 100%;
+      }
+      a span {
+        flex-grow: 2;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      a ha-icon {
+        flex-grow: 0;
+        flex-shrink: 0;
+        justify-content: right;
+      }

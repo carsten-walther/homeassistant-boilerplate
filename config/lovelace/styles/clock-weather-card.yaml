@@ -1,0 +1,25 @@
+---
+#################################################
+#                                               #
+# Styles for clock-weather-card                 #
+#                                               #
+#################################################
+
+style:
+  .: |
+    ha-card {
+      --ha-card-background: transparent;
+      --ha-card-border-color: transparent;
+      --ha-card-border-width: 0;
+    }
+    .card-content {
+      padding: 0;
+    }
+    clock-weather-card-today clock-weather-card-today-right {
+      justify-content: right;
+    }
+    @media (max-width: 500px) {
+      ha-card {
+        display: none;
+      }
+    }

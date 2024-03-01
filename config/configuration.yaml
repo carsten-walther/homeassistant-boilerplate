@@ -1,0 +1,42 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+  # Load custom cards
+  extra_module_url:
+    - /local/js/card-mod.js?v=3.4.2
+    - /local/js/wallpanel.js?v=4.24.1
+    - /local/js/clock-weather-card.js?v=2.2.2
+    - /local/js/mini-graph-card-bundle.js?v=0.12.0
+
+# Set lovelace mode to yaml
+lovelace:
+  mode: yaml
+
+# Sensors for weather forcast values
+template:
+  sensor:
+    - name: Outside Temperature
+      unit_of_measurement: "°C"
+      state: "{{ state_attr('weather.forecast_home', 'temperature') }}"
+    - name: Outside Humidity
+      unit_of_measurement: "%"
+      state: "{{ state_attr('weather.forecast_home', 'humidity') }}"
+    - name: Outside Pressure
+      unit_of_measurement: "hPa"
+      state: "{{ state_attr('weather.forecast_home', 'pressure') }}"
+
+# Mode selector
+input_boolean:
+  dark_mode:
+    name: Dark mode
+    icon: mdi:theme-light-dark
+
+# Load automations, scripts and scenes
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml

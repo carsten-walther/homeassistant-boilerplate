@@ -1,0 +1,9 @@
+---
+#################################################
+#                                               #
+# Lovelace configuration                        #
+#                                               #
+#################################################
+
+# Load Dashboard from lovelace/index.yaml file
+!include lovelace/index.yaml

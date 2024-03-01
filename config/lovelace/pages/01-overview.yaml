@@ -1,0 +1,129 @@
+---
+#################################################
+#                                               #
+# Overview                                      #
+#                                               #
+#################################################
+
+title: Overview
+icon: mdi:monitor-dashboard
+type: sidebar
+path: overview
+subview: false
+badges: []
+cards:
+
+  # Load the sidebar from separate file
+  - !include ../components/sidebar.yaml
+
+  - type: grid
+    title: Environment
+    columns: 4
+    square: false
+    cards:
+      
+      - type: custom:mini-graph-card
+        name: Temperature
+        hours_to_show: 48
+        animate: true
+        labels_secondary: false
+        labels: false
+        color_thresholds:
+          - value: 0
+            color: "#4285F4"
+          - value: 18
+            color: "#0F9D58"
+          - value: 26
+            color: "#DB4437"
+        entities:
+          - entity: sensor.outside_temperature
+            show_legend: false
+            show_indicator: false
+            show_points: false
+      
+      - type: custom:mini-graph-card
+        name: Humidity
+        hours_to_show: 48
+        animate: true
+        labels_secondary: false
+        labels: false
+        color_thresholds:
+          - value: 45
+            color: "#4285F4"
+          - value: 55
+            color: "#0F9D58"
+          - value: 65
+            color: "#DB4437"
+        entities:
+          - entity: sensor.outside_humidity
+            show_legend: false
+            show_indicator: false
+            show_points: false
+      
+      - type: custom:mini-graph-card
+        name: Pressure
+        hours_to_show: 48
+        animate: true
+        labels_secondary: false
+        labels: false
+        color_thresholds:
+          - value: 925
+            color: "#4285F4"
+          - value: 1013.25
+            color: "#0F9D58"
+          - value: 1070
+            color: "#DB4437"
+        entities:
+          - entity: sensor.outside_pressure
+            show_legend: false
+            show_indicator: false
+            show_points: false
+
+  - type: grid
+    title: Informations
+    columns: 4
+    square: false
+    view_layout:
+      position: main
+    cards:
+
+      - type: tile
+        name: Waste collection
+        entity: sensor.waste_collection
+
+  - type: grid
+    title: Lights & Switches
+    columns: 4
+    square: false
+    cards: 
+
+      - type: tile
+        name: All lights
+        entity: light.all_lights
+        tap_action:
+          action: toggle
+
+      - type: tile
+        name: All switches
+        entity: switch.all_switches
+        tap_action:
+          action: toggle
+
+  - type: grid
+    title: Media
+    columns: 4
+    square: false
+    cards:
+
+      - type: media-control
+        entity: media_player.apple_tv
+
+  - type: grid
+    title: Persons
+    columns: 4
+    square: false
+    cards:
+
+      - type: tile
+        name: Admin
+        entity: person.administrator

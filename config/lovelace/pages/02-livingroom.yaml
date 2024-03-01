@@ -1,0 +1,50 @@
+---
+#################################################
+#                                               #
+# Livingroom                                    #
+#                                               #
+#################################################
+
+title: Livingroom
+icon: mdi:sofa-outline
+type: sidebar
+path: livingroom
+subview: false
+badges: []
+cards:
+
+  # Load the sidebar from separate file
+  - !include ../components/sidebar.yaml
+
+  - type: grid
+    title: Livingroom
+    columns: 4
+    square: false
+    cards: []
+
+  - type: grid
+    title: Lights & Switches
+    columns: 4
+    square: false
+    cards: []
+
+  - type: grid
+    title: Scenes
+    columns: 4
+    square: false
+    cards:
+      - type: markdown
+        content: |
+          Currently no scenes available.
+
+  - type: grid
+    title: Entities
+    columns: 4
+    square: false
+    cards: []
+
+  - type: grid
+    title: Devices
+    columns: 4
+    square: false
+    cards: []

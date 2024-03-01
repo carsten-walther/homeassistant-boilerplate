@@ -1,0 +1,28 @@
+---
+#################################################
+#                                               #
+# Settings                                      #
+#                                               #
+#################################################
+
+title: Settings
+icon: mdi:cog-outline
+type: sidebar
+path: settings
+subview: false
+badges: []
+cards:
+
+  # Load the sidebar from separate file
+  - !include ../components/sidebar.yaml
+
+  - type: grid
+    title: Settings
+    columns: 4
+    square: false
+    cards:
+
+      - type: entities
+        name: Dark mode
+        entities:
+          - input_boolean.dark_mode

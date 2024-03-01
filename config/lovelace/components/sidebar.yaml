@@ -1,0 +1,79 @@
+---
+#################################################
+#                                               #
+# Sidebar                                       #
+#                                               #
+#################################################
+
+type: vertical-stack
+view_layout:
+  position: sidebar
+cards:
+  - type: markdown
+    content: |
+      <h1>{{ now().timestamp() | timestamp_custom('%H:%M') }}</h1>
+    card_mod: !include ../styles/markdown.yaml
+
+  - type: markdown
+    content: |
+      {% set greeting = '' %}
+      {% set time = now().hour %}
+      {% if time <= 1 %} {% set greeting = 'Good night' %}
+      {% elif time <= 3 %} {% set greeting = 'Good night' %}
+      {% elif time <= 5 %} {% set greeting = 'Good night' %}
+      {% elif time <= 7 %} {% set greeting = 'Good morning' %}
+      {% elif time <= 9 %} {% set greeting = 'Good morning' %}
+      {% elif time <= 10 %} {% set greeting = 'Good morning' %}
+      {% elif time <= 13 %} {% set greeting = 'Good day' %}
+      {% elif time <= 15 %} {% set greeting = 'Good day' %}
+      {% elif time <= 17 %} {% set greeting = 'Good day' %}
+      {% elif time <= 19 %} {% set greeting = 'Good evening' %}
+      {% elif time <= 22 %} {% set greeting = 'Good evening' %}
+      {% elif time <= 23 %} {% set greeting = 'Good evening' %}
+      {% else %} {% set greeting = 'Good evening' %}
+      {% endif %}
+      <p><small>{{ greeting }}</small></p>
+    card_mod: !include ../styles/markdown.yaml
+
+  - type: markdown
+    content: |
+      {% set weekdays = ["Monday", "Tuesdany", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] %}
+      {% set months = ["January", "February", "March", "April", "Mai", "June", "July", "August", "September", "October", "November", "December"] %}
+      <p>
+        <strong>{{ weekdays[now().weekday()] }}</strong><br/>
+        <strong>{{ now().strftime("%-d") }}.{{ months[now().month - 1] }}</strong> {{ now().strftime("%Y")}}
+      </p>
+    card_mod: !include ../styles/markdown.yaml
+
+  - type: markdown
+    content: >
+      <hr />
+    card_mod: !include ../styles/markdown.yaml
+
+  - type: custom:clock-weather-card
+    entity: weather.forecast_home
+    sun_entity: sun.sun
+    weather_icon_type: line
+    animated_icon: true
+    time_format: 24
+    hide_today_section: false
+    hide_forecast_section: true
+    hide_clock: true
+    hide_date: true
+    hourly_forecast: false
+    use_browser_time: false
+    card_mod: !include ../styles/clock-weather-card.yaml
+    tap_action:
+      action: none
+
+  - type: markdown
+    content: >
+      <hr />
+    card_mod: !include ../styles/markdown-hide-mobile.yaml
+
+  - type: markdown
+    content: |
+      - [<span>Overview</span> <ha-icon icon="mdi:monitor-dashboard"></ha-icon>](/lovelace/overview)
+      - [<span>Livingroom</span> <ha-icon icon="mdi:sofa-outline"></ha-icon>](/lovelace/livingroom)
+      - [<span>Kitchen</span> <ha-icon icon="mdi:silverware"></ha-icon>](/lovelace/kitchen)
+    card_mod: !include ../styles/markdown-hide-mobile.yaml

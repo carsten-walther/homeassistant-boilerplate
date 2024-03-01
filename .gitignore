@@ -1,0 +1,10 @@
+# folders
+*/.cloud
+*/.storage
+*/blueprints
+*/deps
+*/tts
+
+# files
+*/.HA_VERSION
+*/home-assistant*.*

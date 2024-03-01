@@ -1,0 +1,250 @@
+---
+#################################################
+#                                               #
+# Custom Theme                                  #
+#                                               #
+#################################################
+
+Custom-Theme:
+
+  # Header:
+  app-header-background-color: rgba(0, 0, 0, 0.75)
+  app-header-text-color: rgb(229, 229, 234)
+  app-header-selection-bar-color: var(--primary-color)
+  app-header-edit-background-color: rgb(72, 72, 74)
+  app-header-border-bottom: 0 none
+
+  # Main Interface Colors
+  primary-color: rgb(10, 132, 255)
+  primary-background-color: rgb(0, 0, 0)
+  secondary-background-color: rgb(44, 44, 46)
+  divider-color: rgb(44, 44, 46)
+  accent-color: rgb(10, 132, 255)
+
+  # Text
+  primary-text-color: rgb(242, 242, 247)
+  secondary-text-color: rgb(174, 174, 178)
+  text-primary-color: var(--primary-text-color)
+  disabled-text-color: rgb(72, 72, 74)
+
+  # Sidebar Menu
+  sidebar-icon-color: rgb(199, 199, 204)
+  sidebar-text-color: var(--primary-text-color)
+  sidebar-background-color: rgb(28, 28, 30)
+  sidebar-selected-background-color: var(--primary-background-color)
+  sidebar-selected-icon-color: rgb(10, 132, 255)
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color))
+
+  # Buttons
+  paper-item-icon-color: rgb(174, 174, 178)
+  paper-item-icon-active-color: rgb(10, 132, 255)
+  mdc-button-outline-color: rgb(10, 132, 255)
+
+  # States and Badges
+  state-icon-color: var(--paper-item-icon-color)
+  state-icon-active-color: var(--paper-item-icon-active-color)
+  state-icon-unavailable-color: var(--disabled-text-color)
+
+  # Sliders
+  paper-slider-knob-color: rgb(242, 242, 247)
+  paper-slider-knob-start-color: var(--paper-slider-knob-color)
+  paper-slider-pin-color: rgb(10, 132, 255)
+  paper-slider-active-color: rgb(10, 132, 255)
+  paper-slider-secondary-color: var(--paper-slider-active-color)
+
+  # Labels
+  label-badge-background-color: var(--secondary-background-color)
+  label-badge-text-color: var(--primary-text-color)
+  label-badge-red: rgb(255, 69, 58)
+  label-badge-green: rgb(48, 209, 88)
+  label-badge-blue: rgb(10, 132, 255)
+  label-badge-yellow: rgb(255, 214, 10)
+  label-badge-gray: rgb(72, 72, 74)
+
+  # Cards
+  card-background-color: rgba(0, 0, 0, 0.3)
+  ha-card-background: rgba(0, 0, 0, 0.3)
+  ha-card-border-color: rgba(0, 0, 0, 0.3)
+  ha-card-border-radius: 1rem
+  ha-card-border-width: 0px
+  ha-dialog-border-radius: var(--ha-card-border-radius)
+  paper-dialog-background-color: var(--card-background-color)
+  paper-listbox-background-color: var(--card-background-color)
+  paper-card-background-color: var(--card-background-color)
+  grid-card-gap: 1.5rem
+
+  # Switches
+  switch-checked-button-color: rgb(242, 242, 247)
+  switch-checked-track-color: rgb(48, 209, 88)
+  switch-unchecked-button-color: rgb(242, 242, 247)
+  switch-unchecked-track-color: rgb(99, 99, 102)
+
+  # Toggles
+  paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
+  paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
+  paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
+  paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
+
+  # Table
+  table-row-background-color: rgb(28, 28, 30)
+  table-row-alternative-background-color: rgb(44, 44, 46)
+  data-table-background-color: rgb(0, 0, 0)
+
+  # Dropdowns
+  material-background-color: rgb(28, 28, 30)
+  material-secondary-background-color: rgb(44, 44, 46)
+  mdc-theme-surface: var(--secondary-background-color)
+
+  # Pre/Code
+  markdown-code-background-color: rgb(58, 58, 60)
+  code-editor-background-color: rgb(58, 58, 60)
+
+  # Checkboxes
+  mdc-checkbox-unchecked-color: rgb(174, 174, 178)
+  mdc-checkbox-disable-color: var(--disabled-text-color)
+  mdc-select-fill-color: rgb(28, 28, 30)
+  mdc-select-ink-color: var(--primary-text-color)
+  mdc-select-label-ink-color: var(--secondary-text-color)
+  mdc-select-idle-line-color: var(--primary-text-color)
+  mdc-select-dropdown-icon-color: var(--secondary-text-color)
+  mdc-select-hover-line-color: var(--accent-color)
+
+  # Input
+  input-fill-color: var(--secondary-background-color)
+  input-dropdown-icon-color: var(--secondary-text-color)
+  input-ink-color: var(--primary-text-color)
+  input-label-ink-color: var(--secondary-text-color)
+  input-idle-line-color: var(--primary-text-color)
+  input-hover-line-color: var(--accent-color)
+
+  # RGB
+  rgb-primary-text-color: 242, 242, 247
+  rgb-primary-color: 242, 242, 247
+
+  # Fonts
+  primary-font-family: "Open Sans,Roboto,Noto,sans-serif"
+  paper-font-common-base_-_font-family: "var(--primary-font-family)"
+  paper-font-common-code_-_font-family: "var(--primary-font-family)"
+  paper-font-body1_-_font-family: "var(--primary-font-family)"
+  paper-font-subhead_-_font-family: "var(--primary-font-family)"
+  paper-font-headline_-_font-family: "var(--primary-font-family)"
+  paper-font-caption_-_font-family: "var(--primary-font-family)"
+  paper-font-title_-_font-family: "var(--primary-font-family)"
+
+  # Dark/Light mode background
+  modes:
+    light:
+      lovelace-background: linear-gradient(45deg, rgb(255, 0, 72), rgb(45, 50, 200))
+    dark:
+      lovelace-background: linear-gradient(45deg, rgb(0, 0, 0), rgb(72, 72, 72))
+
+  # Custom
+  sidebar-width: 300px
+
+  # Card Mod
+  card-mod-theme: Custom-Theme
+
+  card-mod-root-yaml: |
+    .: |
+      .header {
+        top: auto !important;
+        bottom: 0 !important;
+      }
+      #view {
+        padding-top: 0 !important;
+        padding-bottom: calc(var(--header-height) + env(safe-area-inset-top)) !important;
+      }
+      ha-tabs {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-inline-start: unset !important;
+        margin-inline-end: unset !important;
+      }
+
+  card-mod-view-yaml: |
+    .: |
+      hui-sidebar-view {
+        padding-top: 0;
+      }
+
+    hui-sidebar-view $: |
+      :root {
+        --ha-card-background: transparent;
+      }
+
+      .container {
+        justify-content: left !important;
+        flex-direction: row-reverse;
+        margin: 0 !important;
+      }
+
+      #sidebar {
+        max-width: unset !important;
+        width: var(--sidebar-width) !important;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 0 1.5rem;
+        border-right: 1px solid var(--ha-card-border-color, rgba(0, 0, 0, 0.3)); 
+        position: fixed;
+        overflow-y: scroll;
+        padding-bottom: var(--header-height);
+        height: 100vh !important;
+      }
+      @media (max-width: 1023px) {
+        #sidebar {
+          position: initial;
+          height: initial;
+        }
+      }
+      
+      #main {
+        max-width: 1000px !important;
+        padding: 0 1.5rem;
+        position: relative;
+        left: var(--sidebar-width);
+      }
+      @media (max-width: 1379px) {
+        #main {
+          max-width: calc(100vw - var(--sidebar-width) - 56px) !important;
+        }
+      }
+      @media (max-width: 1023px) {
+        #main {
+          position: initial;
+          left: unset;
+        }
+      }
+
+      @media (max-width: 1023px) {
+        hui-grid-card[style*="--grid-card-column-count: 2;"] {
+          --grid-card-column-count: 1 !important;
+        }
+        hui-grid-card[style*="--grid-card-column-count: 4;"] {
+          --grid-card-column-count: 2 !important;
+        }
+      }
+
+  card-mod-card-yaml: |
+    ha-tile-info $: |
+      .primary {
+        font-weight: bold !important;
+        font-size: 1.125rem !important;
+      }
+      .secondary {
+        font-size: 1rem !important;
+      }
+
+  card-mod-more-info-yaml: |
+    $: |
+      .mdc-dialog .mdc-dialog__scrim {
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .mdc-dialog .mdc-dialog__container .mdc-dialog__surface {
+        box-shadow: none !important;
+        border-radius: var(--ha-card-border-radius);
+      }
+    .: |
+      :host {
+        --ha-card-box-shadow: none;
+      }

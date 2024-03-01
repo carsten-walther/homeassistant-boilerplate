@@ -1,0 +1,19 @@
+---
+#################################################
+#                                               #
+# Dashboard configuration                       #
+#                                               #
+#################################################
+
+title: Dashboard
+wallpanel: !include components/wallpanel.yaml
+
+# Load the pages
+views:
+  - !include pages/01-overview.yaml
+  - !include pages/02-livingroom.yaml
+  - !include pages/03-kitchen.yaml
+
+  # ... more to come
+
+  - !include pages/99-settings.yaml

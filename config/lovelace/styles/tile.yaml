@@ -1,0 +1,14 @@
+---
+#################################################
+#                                               #
+# Styles for tile cards                         #
+#                                               #
+#################################################
+
+style:
+  .: |
+    {% if is_state(config.entity, 'home') %}
+    ha-card.active {
+      --ha-card-background: var(--primary-color);
+    }
+    {% endif %}
