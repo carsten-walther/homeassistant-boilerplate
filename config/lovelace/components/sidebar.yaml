@@ -41,7 +41,7 @@ cards:
       {% set months = ["January", "February", "March", "April", "Mai", "June", "July", "August", "September", "October", "November", "December"] %}
       <p>
         <strong>{{ weekdays[now().weekday()] }}</strong><br/>
-        <strong>{{ now().strftime("%-d") }}.{{ months[now().month - 1] }}</strong> {{ now().strftime("%Y")}}
+        <strong>{{ months[now().month - 1] }}, {{ now().strftime("%-d") }}</strong> {{ now().strftime("%Y")}}
       </p>
     card_mod: !include ../styles/markdown.yaml
 
