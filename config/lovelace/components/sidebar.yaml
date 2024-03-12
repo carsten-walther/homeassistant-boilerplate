@@ -71,9 +71,15 @@ cards:
       <hr />
     card_mod: !include ../styles/markdown-hide-mobile.yaml
 
-  - type: markdown
-    content: |
-      - [<span>Overview</span> <ha-icon icon="mdi:monitor-dashboard"></ha-icon>](/lovelace/overview)
-      - [<span>Livingroom</span> <ha-icon icon="mdi:sofa-outline"></ha-icon>](/lovelace/livingroom)
-      - [<span>Kitchen</span> <ha-icon icon="mdi:silverware"></ha-icon>](/lovelace/kitchen)
-    card_mod: !include ../styles/markdown-hide-mobile.yaml
+  - type: custom:menu-card
+    items:
+      - name: Overview
+        path: /lovelace/overview
+        icon: mdi:monitor-dashboard
+      - name: Livingroom
+        path: /lovelace/livingroom
+        icon: mdi:sofa-outline
+      - name: Kitchen
+        path: /lovelace/kitchen
+        icon: mdi:silverware
+    card_mod: !include ../styles/menu-card-hide-mobile.yaml
