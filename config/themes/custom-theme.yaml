@@ -204,7 +204,7 @@ Custom-Theme:
       }
       @media (max-width: 1379px) {
         #main {
-          max-width: calc(100vw - var(--sidebar-width) - 56px) !important;
+          max-width: calc(100vw - var(--sidebar-width) - 56px);
         }
       }
       @media (max-width: 1023px) {
