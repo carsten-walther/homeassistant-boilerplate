@@ -1,0 +1,17 @@
+---
+style:
+  .: |
+    ha-card {
+      --ha-card-background: transparent;
+      --ha-card-border-color: transparent;
+      --ha-card-border-width: 0;
+    }
+    ha-card, menu-card {
+      margin-top: 16px;
+      padding: 0 !important;
+    }
+    @media (max-width: 767px) {
+      ha-card, menu-card {
+        display: none;
+      }
+    }
