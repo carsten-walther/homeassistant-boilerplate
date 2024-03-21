@@ -17,6 +17,11 @@ frontend:
 lovelace:
   mode: yaml
 
+  # Add resouces like custom cards etc.
+  resources:
+    - url: /local/js/menu-card.js
+      type: module
+
 # Sensors for weather forcast values
 template:
   sensor:
