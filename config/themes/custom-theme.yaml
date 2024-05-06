@@ -152,7 +152,9 @@ Custom-Theme:
       }
       #view {
         padding-top: 0 !important;
-        padding-bottom: calc(var(--header-height) + env(safe-area-inset-top)) !important;
+        padding-bottom: calc(var(--header-height) + env(safe-area-inset-top) + 24px) !important;
+        background-color: var(--lovelace-background, var(--primary-background-color));
+        background-attachment: fixed !important;
       }
       ha-tabs {
         margin-left: auto !important;
@@ -163,6 +165,9 @@ Custom-Theme:
 
   card-mod-view-yaml: |
     .: |
+      hui-view {
+        background: none !important;
+      }
       hui-sidebar-view {
         padding-top: 0;
       }
