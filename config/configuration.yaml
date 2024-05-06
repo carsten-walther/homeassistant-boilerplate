@@ -19,8 +19,15 @@ lovelace:
 
   # Add resouces like custom cards etc.
   resources:
+    # default css
+    - url: /local/css/style.css
+      type: css
+    # load js mods
     - url: /local/js/menu-card.js
       type: module
+    # background animation
+    - url: /local/js/background-animation-stars.js
+      type: js
 
 # Sensors for weather forcast values
 template:
